@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Jeff Blasius</title>
+	<link href="http://jeff.blasius.ws/atom.xml" rel="self"/>
+	<link href="http://jeff.blasius.ws/"/>
+	<updated>2011-06-09T18:11:29-04:00</updated>
+	<id>http://jeff.blasius.ws/</id>
+	<author>
+		<name>Jeff Blasius</name>
+		<email>jeff.blasius@gmail.com</email>
+	</author>
+
+	
+	<entry>
+		<title>Subversion Restore</title>
+		<link href="http://jeff.blasius.ws/2011/06/09/first-post.html"/>
+		<updated>2011-06-09T00:00:00-04:00</updated>
+		<id>http://jeff.blasius.ws/2011/06/09/first-post</id>
+		<content type="html">&lt;p&gt;A way to restore an svn repository from dumps of individual commits. This is a companion to the &lt;a href=&quot;/2010/02/22/bare-bones-svn-backup.html&quot;&gt;Subversion backup script&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env ruby&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start_revision&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ceiling&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end_revision&lt;/span&gt;
+ 
+&lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ceiling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`gunzip &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;.dump.gz`&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`svnadmin load /path/to/repos &amp;lt; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;.dump`&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`rm -f &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;.dump`&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+
+</content>
+	</entry>
+	
+
+</feed>
