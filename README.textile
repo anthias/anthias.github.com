@@ -1,1 +1,1 @@
-This blog is open source. You can fork it on "github":http://help.github.com/pull-requests/
+This blog is open source. You can fork it on "github":https://github.com/anthias/anthias.github.com
