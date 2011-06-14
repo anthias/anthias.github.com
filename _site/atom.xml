@@ -4,7 +4,7 @@
 	<title>Jeff Blasius</title>
 	<link href="http://jeff.blasius.ws/atom.xml" rel="self"/>
 	<link href="http://jeff.blasius.ws/"/>
-	<updated>2011-06-09T18:11:29-04:00</updated>
+	<updated>2011-06-14T15:00:05-04:00</updated>
 	<id>http://jeff.blasius.ws/</id>
 	<author>
 		<name>Jeff Blasius</name>
@@ -13,26 +13,17 @@
 
 	
 	<entry>
-		<title>Subversion Restore</title>
-		<link href="http://jeff.blasius.ws/2011/06/09/first-post.html"/>
-		<updated>2011-06-09T00:00:00-04:00</updated>
-		<id>http://jeff.blasius.ws/2011/06/09/first-post</id>
-		<content type="html">&lt;p&gt;A way to restore an svn repository from dumps of individual commits. This is a companion to the &lt;a href=&quot;/2010/02/22/bare-bones-svn-backup.html&quot;&gt;Subversion backup script&lt;/a&gt;.&lt;/p&gt;
+		<title>Wrong Paths</title>
+		<link href="http://jeff.blasius.ws/2011/06/14/wrong-paths.html"/>
+		<updated>2011-06-14T00:00:00-04:00</updated>
+		<id>http://jeff.blasius.ws/2011/06/14/wrong-paths</id>
+		<content type="html">&lt;p&gt;Lately, I've been particularly interested in how we, as creators, go down wrong paths. How do we become convinced the wrong choice is actually right? What senses do we need to catch &quot;smelly&quot; decisions? Should we relax our eternal drive for perfection and just go with the wrong choice as an exercise in being &quot;dynamic&quot; or &quot;flexible&quot;?&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/env ruby&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;start_revision&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;ceiling&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end_revision&lt;/span&gt;
- 
-&lt;span class=&quot;n&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;upto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ceiling&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`gunzip &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;.dump.gz`&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`svnadmin load /path/to/repos &amp;lt; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;.dump`&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`rm -f &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;.dump`&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;At &lt;a href=&quot;http://seeclickfix.com&quot;&gt;SeeClickFix&lt;/a&gt; we've become obsessed with menus. Not in the sense that we plaster menus all over the site (if you think this is true, please let me know :) ), but in terms of analyzing the menus and how they drive user experience and site discovery. While looking at older menus, I realize we were stuck on items that made the site overly complicated and domain-specific terminology. For example, one top menu item called &quot;pro tools&quot; contained links to various account specific settings. The term &quot;pro&quot; was used here to describe a pro user, but also a &quot;pro&quot; account (confused yet?). In addition, the links weren't really tools, but low-use settings pages. We added this menu item because we knew we wanted links for an account manager to make changes to their account easily. What we weren't thinking about is how flexible this option would be moving forward as the site, and its feature set, grew. In this case we could have easily avoided this problem by identifying the primary function of the menu item and categorize it in a generic, easy to understand way. This strategy helps to create a site that makes sense as it grows while providing an interface users are familiar with.&lt;/p&gt;
 
+&lt;p&gt;One thing we do regularly when deciding how to create great UI is look at how other sites solve the same problems. In the case above, there are many sites which group settings into one menu item, then further break down by organization or personal. Some sites choose to make settings contextual within a single &quot;management&quot; interface. Whatever you choose, be sure that your decision is flexible and familiar for users.&lt;/p&gt;
 
-
+&lt;p&gt;In the case of the menu decision, how could we have prevented this in the first place? Should we have or should we wait for user feedback? One red flag might have been the use of domain specific words in a top level menu. Duh! Perhaps it was also the narrow need to have this menu item in the first place without thoroughly thinking through the more generic purpose of the item. i.e. what is the use case, how would the user interact with this item? Is its importance represented appropriately in the UI?&lt;/p&gt;
 </content>
 	</entry>
 	

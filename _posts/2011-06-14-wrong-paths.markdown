@@ -1,0 +1,12 @@
+---
+layout: post
+title: Wrong Paths
+---
+
+Lately, I've been particularly interested in how we, as creators, go down wrong paths. How do we become convinced the wrong choice is actually right? What senses do we need to catch "smelly" decisions? Should we relax our eternal drive for perfection and just go with the wrong choice as an exercise in being "dynamic" or "flexible"? 
+
+At [SeeClickFix](http://seeclickfix.com) we've become obsessed with menus. Not in the sense that we plaster menus all over the site (if you think this is true, please let me know :) ), but in terms of analyzing the menus and how they drive user experience and site discovery. While looking at older menus, I realize we were stuck on items that made the site overly complicated and domain-specific terminology. For example, one top menu item called "pro tools" contained links to various account specific settings. The term "pro" was used here to describe a pro user, but also a "pro" account (confused yet?). In addition, the links weren't really tools, but low-use settings pages. We added this menu item because we knew we wanted links for an account manager to make changes to their account easily. What we weren't thinking about is how flexible this option would be moving forward as the site, and its feature set, grew. In this case we could have easily avoided this problem by identifying the primary function of the menu item and categorize it in a generic, easy to understand way. This strategy helps to create a site that makes sense as it grows while providing an interface users are familiar with.
+
+One thing we do regularly when deciding how to create great UI is look at how other sites solve the same problems. In the case above, there are many sites which group settings into one menu item, then further break down by organization or personal. Some sites choose to make settings contextual within a single "management" interface. Whatever you choose, be sure that your decision is flexible and familiar for users. 
+
+In the case of the menu decision, how could we have prevented this in the first place? Should we have or should we wait for user feedback? One red flag might have been the use of domain specific words in a top level menu. Duh! Perhaps it was also the narrow need to have this menu item in the first place without thoroughly thinking through the more generic purpose of the item. i.e. what is the use case, how would the user interact with this item? Is its importance represented appropriately in the UI?   

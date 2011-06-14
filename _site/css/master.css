@@ -75,6 +75,9 @@ table {
 .span-17{width:670px;}
 .span-18{width:710px;margin-right:0;}
 
+.underline {
+	border-bottom: 2px solid #BEBEBE;
+}
 
 /* - HTML Elements
 -------------------------------------------------------*/
@@ -85,14 +88,15 @@ body {
 	font-family: Georgia, serif;
 	font-size: 15px;
 	line-height: 1.5;
-	color: #424254;
+	color: #4D5C66;
 	padding-bottom: 20px;
+	background:#FDF9F5;
 }
 a,a:visited {
-	color: #3061BE;
+	color: #526F61;
 }
 a:hover,a:active {
-	color: #000;
+	color: #526F61;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight:normal;
@@ -128,9 +132,7 @@ li {
 /* - Structure
 -------------------------------------------------------*/
 header {
-	background: #D7D7D7;
-	border-bottom: 2px solid #BEBEBE;
-	padding: 8px 0;
+	padding: 80px 0 8px 0;
 	margin-bottom: 1.5em;
 	line-height: 1;
 }
@@ -146,11 +148,11 @@ header p {
 	width: 300px;
 }
 #logo a {
-	color: #545454;
+	color: #56576F;
 	text-decoration: none;
 }
 #logo a:hover {
-	color: #000;
+	color: #56576F;
 }
 nav ul {
 	float: right;
@@ -174,11 +176,11 @@ nav li a {
 	padding: 4px 7px 3px 6px;
 }
 nav li.selected a {
-	color: #fff;
+/*	color: #fff;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
-	background: #3061BE;
+	background: #3061BE;*/
 }
 footer p {
 	border-top: 1px dotted #BEBEBE;
@@ -210,7 +212,7 @@ footer p {
 	color: #FFF;
 }
 a.pill {
-	background: #3061BE;
+	background: #56576F;
 	text-decoration: none;
 	color: #FFF;
 }
